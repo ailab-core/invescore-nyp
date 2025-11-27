@@ -1,6 +1,7 @@
 import { DotIcon } from "lucide-react"
 import AnimatedContent from "@/components/ui-patterns/animated-content"
 import ScrollVelocity from "@/components/ui-patterns/scroll-velocity"
+import HollywoodPNG from '/hollywood.png'
 
 export default function LandingPage() {
   return (
@@ -27,7 +28,7 @@ export default function LandingPage() {
             threshold={0.1}
             delay={0}
           >
-            <img className="w-xs md:w-md pointer-events-none" src="/hollywood.png" />
+            <img className="w-xs md:w-md pointer-events-none" src={HollywoodPNG} />
           </AnimatedContent>
           <AnimatedContent
             className="md:block hidden"
