@@ -10,7 +10,6 @@ declare module "@tanstack/react-router" {
 
 const router = createRouter({
   routeTree,
-  basepath: "/invescore-nyp",
   defaultPreload: "intent",
   scrollRestoration: true,
   defaultStructuralSharing: true,
