@@ -7,7 +7,7 @@ export default function NavigationMenu() {
       <a href="#agenda">{"Agenda"}</a>
       <a href="#menu">{"Menu"}</a>
       <a href="#map">{"Map"}</a>
-      <img src="/red-curtains.png" className="w-[92px] md:w-max md:h-svh absolute -left-5 -top-3 md:-left-10 md:top-0 md:rotate-0 rotate-12 brightness-50" />
+      <img src="/red-curtains.png" className="w-[92px] md:w-max md:h-svh absolute -left-5 -top-3 md:-left-10 md:top-0 md:rotate-0 rotate-12 brightness-50 animate-in transition-all" />
       <img src="/red-curtains.png" className="w-[92px] md:w-max md:h-svh absolute -right-5 -top-3 md:-right-10 md:top-0 rotate-y-180 md:rotate-0 -rotate-12 brightness-50" />
     </div>
   )
