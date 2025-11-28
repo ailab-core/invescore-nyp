@@ -14,7 +14,6 @@ export default function Agenda() {
 
   return (
     <div className="relative w-full my-48">
-      <div className="absolute w-[3000px] h-screen bg-red-700 opacity-10 -left-1/2 -rotate-4 overflow-hidden md:top-1/2 md:-translate-y-1/2" />
       <div className="max-w-fit mx-auto px-4 py-24" id="agenda">
         <AnimatedContent
           distance={100}

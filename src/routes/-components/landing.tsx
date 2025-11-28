@@ -2,6 +2,7 @@ import { DotIcon } from "lucide-react"
 import AnimatedContent from "@/components/ui-patterns/animated-content"
 import ScrollVelocity from "@/components/ui-patterns/scroll-velocity"
 import HollywoodPNG from '/hollywood.png'
+import IntroductionVideo from '/introduction.mp4'
 
 export default function LandingPage() {
   return (
@@ -79,7 +80,9 @@ export default function LandingPage() {
           threshold={0.1}
           delay={0.2}
         >
-          <div className="aspect-video w-[90vw] md:w-4xl bg-muted-foreground rounded-lg" />
+          <video controls className="aspect-video rounded-lg w-full md:max-w-3xl" autoPlay>
+            <source src={IntroductionVideo} type="video/mp4" />
+          </video>
         </AnimatedContent>
         <div className="flex flex-col justify-center items-center gap-2">
           <AnimatedContent
