@@ -1,23 +1,24 @@
-### 09:00 AM - Registration & Welcome Coffee
+### 17:00 PM - Check-in & Welcome Reception
 
 - Check-in opens at the main entrance
-- Collect your welcome kit and name badge
-- Network with fellow attendees
+- Network with fellow coworkers
 
-### 10:00 AM - Opening Keynote
+### 18:00 PM - Opening
 
-- Welcome address by the organizing committee
-- Introduction to AI Lab NYP 2025
-- Overview of the day's agenda
+- Opening speech by the host
+- Company highlights and achievements
 
-### 11:00 AM - Workshop Session 1
+### 19:00 PM - Showcase
 
-- **Track A**: Introduction to Machine Learning
-- **Track B**: Deep Learning Fundamentals
-- **Track C**: AI Ethics and Responsible AI
+- Company film showcase
+- Awards ceremony (Best movie & Best actor/actress)
 
-### 11:00 AM - Workshop Session 1
+### 20:00 PM - Employee Service Recognition
 
-- **Track A**: Introduction to Machine Learning
-- **Track B**: Deep Learning Fundamentals
-- **Track C**: AI Ethics and Responsible AI
+- 3 & 5 Years of Service Awards
+
+### 21:00 AM - Lucky Draw & Open Dance Floor
+
+- Lucky draw with exciting prizes
+- Open dance floor with DJ music
+- Go crazy and have fun!
