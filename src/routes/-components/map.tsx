@@ -19,7 +19,7 @@ export const MenuText = ({ delay, children }: { delay: number, children: React.R
 
 export default function Map() {
   return (
-    <div className="container mx-auto flex flex-col justify-center items-center gap-12 m-32 mt-64" id="map">
+    <div className="container mx-auto flex flex-col justify-center items-center gap-12 my-64" id="map">
       <MenuText delay={1.0}>
         <h1 className="text-4xl md:text-8xl mb-4 bg-clip-text text-orange-300">
           MAP
@@ -37,7 +37,7 @@ export default function Map() {
         threshold={0.1}
         delay={1.2}
       >
-        <div className="w-xs md:w-4xl aspect-video bg-muted-foreground rounded-lg" />
+        <div className="w-full md:w-4xl aspect-video bg-muted-foreground rounded-lg" />
       </AnimatedContent>
     </div>
   )

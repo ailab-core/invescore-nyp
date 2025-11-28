@@ -38,7 +38,7 @@ export default function Menu() {
         threshold={0.1}
         delay={1.2}
       >
-        <img src={MenuPNG} alt="Menu" className="w-xs md:w-4xl rounded-3xl shadow-lg object-cover" />
+        <img src={MenuPNG} alt="Menu" className="w-full md:w-4xl rounded-3xl shadow-lg object-cover" />
       </AnimatedContent>
     </div>
   )
