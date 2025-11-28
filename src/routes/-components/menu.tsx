@@ -20,7 +20,7 @@ export const MenuText = ({ delay, children }: { delay: number, children: React.R
 
 export default function Menu() {
   return (
-    <div className="container mx-auto flex flex-col justify-center items-center gap-12 mb-32" id="menu">
+    <div className="container mx-auto flex flex-col justify-center items-center gap-12 my-32" id="menu">
       <MenuText delay={1.0}>
         <h1 className="text-4xl md:text-8xl mb-4 bg-clip-text text-orange-300">
           MENU
