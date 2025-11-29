@@ -21,7 +21,7 @@ export default function LandingPage() {
             distance={150}
             direction="vertical"
             reverse={false}
-            duration={1.2}
+            duration={0.7}
             ease="power3.out"
             initialOpacity={0}
             animateOpacity
@@ -36,7 +36,7 @@ export default function LandingPage() {
             distance={150}
             direction="vertical"
             reverse={false}
-            duration={1.2}
+            duration={0.7}
             ease="power3.out"
             initialOpacity={0}
             animateOpacity
@@ -51,7 +51,7 @@ export default function LandingPage() {
             distance={150}
             direction="vertical"
             reverse={false}
-            duration={1.2}
+            duration={0.7}
             ease="power3.out"
             initialOpacity={0}
             animateOpacity
@@ -72,7 +72,7 @@ export default function LandingPage() {
           distance={150}
           direction="vertical"
           reverse={false}
-          duration={1.2}
+          duration={0.7}
           ease="power3.out"
           initialOpacity={0}
           animateOpacity
@@ -80,7 +80,7 @@ export default function LandingPage() {
           threshold={0.1}
           delay={0.2}
         >
-          <video controls className="aspect-video rounded-lg w-full md:max-w-3xl" autoPlay>
+          <video controls className="aspect-video rounded-lg w-full md:max-w-3xl" >
             <source src={IntroductionVideo} type="video/mp4" />
           </video>
         </AnimatedContent>
@@ -90,7 +90,7 @@ export default function LandingPage() {
             distance={150}
             direction="vertical"
             reverse={false}
-            duration={1.2}
+            duration={0.7}
             ease="power3.out"
             initialOpacity={0}
             animateOpacity
@@ -105,7 +105,7 @@ export default function LandingPage() {
             distance={150}
             direction="vertical"
             reverse={false}
-            duration={1.2}
+            duration={0.7}
             ease="power3.out"
             initialOpacity={0}
             animateOpacity

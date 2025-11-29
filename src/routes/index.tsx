@@ -10,11 +10,11 @@ export const Route = createFileRoute("/")({
 
 function App() {
   return (
-    <>
+    <div className="space-y-32">
       <Landing />
       <Agenda />
       <Menu />
       <Map />
-    </>
+    </div>
   )
 }
