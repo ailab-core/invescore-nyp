@@ -47,7 +47,7 @@ const MenuItems: Array<Food> = [
       alt: "Lemon Curd & Fruits"
     },
     title: "Lemon Curd & Fruits",
-    description: "Tender duck breast, seared to a golden-brown crust while keeping the inside juicy, served with teriyaki sauce, roasted vegetables, or basmati rice."
+    description: ""
   },
 ]
 
