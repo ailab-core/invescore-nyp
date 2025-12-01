@@ -7,7 +7,7 @@ export default function NavigationMenu() {
       <Link to="/">{"Home"}</Link>
       <a href="#agenda">{"Agenda"}</a>
       <a href="#menu">{"Menu"}</a>
-      <a href="#map">{"Map"}</a>
+      <a href="#map">{"Seat"}</a>
       <img src={RedCurtainsPNG} className="w-[92px] md:w-max md:h-svh absolute -left-5 -top-3 md:-left-10 md:top-0 md:rotate-0 rotate-12 brightness-50 animate-in transition-all pointer-events-none" />
       <img src={RedCurtainsPNG} className="w-[92px] md:w-max md:h-svh absolute -right-5 -top-3 md:-right-10 md:top-0 rotate-y-180 md:rotate-0 -rotate-12 brightness-50 pointer-events-none" />
     </div>

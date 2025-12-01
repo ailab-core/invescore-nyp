@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router"
 import Agenda from "./-components/agenda"
 import Landing from "./-components/landing"
 import Menu from "./-components/menu"
-import Map from "./-components/map"
+import Seat from "./-components/seat"
 
 export const Route = createFileRoute("/")({
   component: App,
@@ -14,7 +14,7 @@ function App() {
       <Landing />
       <Agenda />
       <Menu />
-      <Map />
+      <Seat />
     </div>
   )
 }

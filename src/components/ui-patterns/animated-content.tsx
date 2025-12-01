@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface AnimatedContentProps extends React.HTMLAttributes<HTMLDivElement> {
+type AnimatedContentProps = {
   children: React.ReactNode;
   container?: Element | string | null;
   distance?: number;
@@ -22,7 +22,7 @@ interface AnimatedContentProps extends React.HTMLAttributes<HTMLDivElement> {
   disappearEase?: string;
   onComplete?: () => void;
   onDisappearanceComplete?: () => void;
-}
+} & React.HTMLAttributes<HTMLDivElement>
 
 const AnimatedContent: React.FC<AnimatedContentProps> = ({
   children,

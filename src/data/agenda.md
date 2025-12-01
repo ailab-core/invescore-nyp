@@ -1,17 +1,16 @@
-### 17:00 PM - Check-in & Welcome Reception
+### 17:00 PM - Door opening
 
-- Check-in opens at the main entrance
-- Network with fellow coworkers
+- **Welcome Reception** at the main entrance
 
 ### 18:00 PM - Opening
 
-- Opening speech by the host
-- Company highlights and achievements
+- **Opening speech** by the host
+- **Company highlights and achievements**
 
-### 19:00 PM - Showcase
+### 19:00 PM - Film showcase
 
-- Company film showcase
-- Awards ceremony (Best movie & Best actor/actress)
+- **Company film showcase**
+- **Awards ceremony** - Best movie & Best actor/actress
 
 ### 20:00 PM - Employee Service Recognition
 
@@ -19,6 +18,4 @@
 
 ### 21:00 AM - Lucky Draw & Open Dance Floor
 
-- Lucky draw with exciting prizes
-- Open dance floor with DJ music
 - Go crazy and have fun!

@@ -13,7 +13,7 @@ export default function Agenda() {
   agenda.then((txt: any) => setContent(txt))
 
   return (
-    <div className="max-w-fit mx-auto my-24 py-24" id="agenda">
+    <div className="max-w-fit mx-auto my-24" id="agenda">
       <AnimatedContent
         distance={100}
         direction="vertical"

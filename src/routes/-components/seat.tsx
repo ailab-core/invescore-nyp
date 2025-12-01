@@ -1,6 +1,6 @@
 import AnimatedContent from "@/components/ui-patterns/animated-content"
 
-export default function Map() {
+export default function Seat() {
   return (
     <div className="container mx-auto flex flex-col justify-center items-center gap-12 py-24" id="map">
       <AnimatedContent
@@ -16,7 +16,7 @@ export default function Map() {
         delay={0.4}
       >
         <h1 className="text-4xl md:text-6xl mb-4 bg-clip-text text-orange-300 text-center">
-          MAP
+          SEAT
         </h1>
         <p className="text-center text-3xl mt-32">Coming soon...</p>
       </AnimatedContent>

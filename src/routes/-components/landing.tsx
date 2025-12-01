@@ -80,7 +80,7 @@ export default function LandingPage() {
           threshold={0.1}
           delay={0.2}
         >
-          <video controls className="aspect-video rounded-lg w-full md:max-w-3xl" >
+          <video controls className="aspect-video rounded-lg w-full md:max-w-3xl" autoPlay>
             <source src={IntroductionVideo} type="video/mp4" />
           </video>
         </AnimatedContent>
