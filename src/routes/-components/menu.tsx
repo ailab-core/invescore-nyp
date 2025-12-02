@@ -66,14 +66,14 @@ export default function Menu() {
         duration={0.7}
         delay={0.4}
       >
-        <h1 className="text-4xl md:text-6xl mb-4 bg-clip-text text-orange-300">
+        <h1 className="text-4xl lg:text-6xl mb-4 bg-clip-text text-orange-300">
           MENU
         </h1>
       </AnimatedContent>
       <div className="flex flex-col items-center space-y-24">
         {MenuItems.map((food, index) => (
           <Fragment key={food.title}>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-12" key={food.title}>
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-12" key={food.title}>
               <AnimatedContent
                 distance={100}
                 direction="vertical"
@@ -85,7 +85,7 @@ export default function Menu() {
                 threshold={0.7}
                 scale={1}
                 delay={0.4}
-                className={cn("w-fit", index % 2 === 0 ? "order-first md:order-last" : "order-first")}
+                className={cn("w-fit", index % 2 === 0 ? "order-first lg:order-last" : "order-first")}
               >
                 <img
                   src={food.image.src}
@@ -104,13 +104,13 @@ export default function Menu() {
                 threshold={0.7}
                 scale={1}
                 delay={0.4}
-                className={"md:w-lg space-y-4 text-lg px-12"}
+                className={"lg:w-lg space-y-4 text-lg px-12"}
               >
-                <p className="text-3xl font-bold text-center md:text-left">
+                <p className="text-3xl font-bold text-center lg:text-left">
                   {food.title}
                   {food.subtitle && <span className="text-lg ml-2">({food.subtitle})</span>}
                 </p>
-                <p className="text-justify md:text-left">{food.description}</p>
+                <p className="text-justify lg:text-left">{food.description}</p>
               </AnimatedContent>
             </div>
             <hr className="bg-orange-300 w-[100px]" />

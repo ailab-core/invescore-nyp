@@ -11,11 +11,11 @@ export default function LandingPage() {
         <ScrollVelocity
           texts={["TOGETHER INTO THE NEW YEAR - "]}
           velocity={100}
-          className="text-6xl md:text-9xl font-black font-serif pointer-events-none"
+          className="text-6xl lg:text-9xl font-black font-serif pointer-events-none"
           numCopies={10}
         />
       </div>
-      <div className="relative flex md:flex-row flex-col justify-center items-center gap-8 md:gap-12 h-svh">
+      <div className="relative flex lg:flex-row flex-col justify-center items-center gap-8 lg:gap-12 h-svh">
         <div className="flex flex-col justify-center items-center gap-8">
           <AnimatedContent
             distance={150}
@@ -29,10 +29,10 @@ export default function LandingPage() {
             threshold={0.1}
             delay={0}
           >
-            <img className="w-xs md:w-md pointer-events-none" src={HollywoodPNG} />
+            <img className="w-xs lg:w-md pointer-events-none" src={HollywoodPNG} />
           </AnimatedContent>
           <AnimatedContent
-            className="md:block hidden"
+            className="lg:block hidden"
             distance={150}
             direction="vertical"
             reverse={false}
@@ -47,7 +47,7 @@ export default function LandingPage() {
             <h1 className="text-4xl font-black uppercase">{"You are invited!"}</h1>
           </AnimatedContent>
           <AnimatedContent
-            className="md:block hidden"
+            className="lg:block hidden"
             distance={150}
             direction="vertical"
             reverse={false}
@@ -59,7 +59,7 @@ export default function LandingPage() {
             threshold={0.1}
             delay={0.4}
           >
-            <div className="flex md:text-xl">
+            <div className="flex lg:text-xl">
               December 26th 2025
               <DotIcon className="size-6" />
               17:00 PM
@@ -80,13 +80,13 @@ export default function LandingPage() {
           threshold={0.1}
           delay={0.2}
         >
-          <video controls className="aspect-video rounded-lg w-full md:max-w-3xl" autoPlay>
+          <video controls className="aspect-video rounded-lg w-full lg:max-w-3xl" autoPlay>
             <source src={IntroductionVideo} type="video/mp4" />
           </video>
         </AnimatedContent>
         <div className="flex flex-col justify-center items-center gap-2">
           <AnimatedContent
-            className="md:hidden block"
+            className="lg:hidden block"
             distance={150}
             direction="vertical"
             reverse={false}
@@ -101,7 +101,7 @@ export default function LandingPage() {
             <h1 className="text-4xl font-black uppercase">{"You are invited!"}</h1>
           </AnimatedContent>
           <AnimatedContent
-            className="md:hidden block"
+            className="lg:hidden block"
             distance={150}
             direction="vertical"
             reverse={false}
@@ -113,7 +113,7 @@ export default function LandingPage() {
             threshold={0.1}
             delay={0.6}
           >
-            <div className="flex md:text-xl">
+            <div className="flex lg:text-xl">
               December 26th 2025
               <DotIcon className="size-6" />
               17:00 PM

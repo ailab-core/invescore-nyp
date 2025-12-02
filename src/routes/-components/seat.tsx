@@ -15,7 +15,7 @@ export default function Seat() {
         threshold={0.1}
         delay={0.4}
       >
-        <h1 className="text-4xl md:text-6xl mb-4 bg-clip-text text-orange-300 text-center">
+        <h1 className="text-4xl lg:text-6xl mb-4 bg-clip-text text-orange-300 text-center">
           SEAT
         </h1>
         <p className="text-center text-3xl mt-32">Coming soon...</p>
