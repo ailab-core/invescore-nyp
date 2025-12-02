@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 import { cn } from "uilab-core"
 import AnimatedContent from "@/components/ui-patterns/animated-content"
 import ProscuittoPNG from '/proscuitto.png'
@@ -71,7 +72,7 @@ export default function Menu() {
       </AnimatedContent>
       <div className="flex flex-col items-center space-y-24">
         {MenuItems.map((food, index) => (
-          <>
+          <Fragment key={food.title}>
             <div className="flex flex-col md:flex-row items-center justify-center gap-12" key={food.title}>
               <AnimatedContent
                 distance={100}
@@ -113,7 +114,7 @@ export default function Menu() {
               </AnimatedContent>
             </div>
             <hr className="bg-orange-300 w-[100px]" />
-          </>
+          </Fragment>
         ))}
       </div>
 
