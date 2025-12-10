@@ -18,6 +18,15 @@ function RouteComponent() {
   const [spinningIndex, setSpinningIndex] = useState(0)
   const [activeSlot, setActiveSlot] = useState<string | null>(null)
 
+  const rollSlot = async (key: string, delay: number, last: boolean = false) => {
+    setActiveSlot(key)
+    await new Promise((resolve) => setTimeout(resolve, delay))
+    setRevealedSlots((prev) => ({ ...prev, [key]: true }))
+    setActiveSlot(null)
+    if (last) return
+    await new Promise((resolve) => setTimeout(resolve, 300))
+  }
+
   const startSpin = async () => {
     if (isSpinning) return
     setIsSpinning(true)
@@ -26,30 +35,13 @@ function RouteComponent() {
     const finalIndex = Math.floor(Math.random() * NAME_LIST.length)
     setSelectedIndex(finalIndex)
 
-    // Start all slots spinning
     const spinningInterval = setInterval(() => {
       setSpinningIndex((prev) => (prev + 1) % NAME_LIST.length)
     }, 50)
 
-    // Roll company slot
-    setActiveSlot("company")
-    await new Promise((resolve) => setTimeout(resolve, 3000))
-    setRevealedSlots((prev) => ({ ...prev, company: true }))
-    setActiveSlot(null)
-    await new Promise((resolve) => setTimeout(resolve, 300))
-
-    // Roll department slot
-    setActiveSlot("department")
-    await new Promise((resolve) => setTimeout(resolve, 3000))
-    setRevealedSlots((prev) => ({ ...prev, department: true }))
-    setActiveSlot(null)
-    await new Promise((resolve) => setTimeout(resolve, 300))
-
-    // Roll name slot
-    setActiveSlot("name")
-    await new Promise((resolve) => setTimeout(resolve, 4000))
-    setRevealedSlots((prev) => ({ ...prev, name: true }))
-    setActiveSlot(null)
+    await rollSlot("company", 3000)
+    await rollSlot("department", 3000)
+    await rollSlot("name", 4000, true)
 
     clearInterval(spinningInterval)
     setIsSpinning(false)
