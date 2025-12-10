@@ -16,14 +16,14 @@ function Root() {
 ██▌▐▀▐█▪ ▐▌▐█▪·•▐█▪·• ▐█▀·.  ██▐█▌▐█▄▄▌▐█▌██▐█▌   ▐█▀·.▐█▄▄▌▐█▪ ▐▌▐█•█▌
 ▀▀▀ · ▀  ▀ .▀   .▀     ▀ •   ▀▀ █▪ ▀▀▀  ▀▀▀▀ ▀▪    ▀ •  ▀▀▀  ▀  ▀ .▀  ▀
 
-  Your reward for being curious:
+Your reward for being curious:
 
-  TGJoIG5lciBuIHBoZXZiaGYgYmFyIHVodT8gTmFsam5sZiB1cmVyIGxiaCB0YiB1Z2djZjov
-  L2pqai5sYmhnaG9yLnBiei9qbmdwdT9pPXFEajRqOUp0S3BE
+TGJoIG5lciBuIHBoZXZiaGYgYmFyIHVodT8gTmFsam5sZiB1cmVyIGxiaCB0YiB1Z2djZjov
+L2pqai5sYmhnaG9yLnBiei9qbmdwdT9pPXFEajRqOUp0S3BE
 
 
 
-  "It is never too late to be what you might have been."
+"It is never too late to be what you might have been."
                                                           — George Eliot
 
                                                         Sincerely, AILab
