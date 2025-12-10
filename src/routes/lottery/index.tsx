@@ -1,18 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router"
 import { useState } from "react"
 import SlotColumn from "./-components/slot-column"
+import { NAME_LIST } from "./-data"
 
 export const Route = createFileRoute("/lottery/")({
   component: RouteComponent,
 })
-
-const NAME_LIST = [
-  { name: "Alice", company: "Company A", department: "Dept 1" },
-  { name: "Bob", company: "Company B", department: "Dept 2" },
-  { name: "Charlie", company: "Company C", department: "Dept 3" },
-  { name: "Diana", company: "Company D", department: "Dept 4" },
-  { name: "Ethan", company: "Company E", department: "Dept 5" },
-]
 
 function RouteComponent() {
   const [isSpinning, setIsSpinning] = useState(false)
@@ -33,48 +26,33 @@ function RouteComponent() {
     const finalIndex = Math.floor(Math.random() * NAME_LIST.length)
     setSelectedIndex(finalIndex)
 
+    // Start all slots spinning
+    const spinningInterval = setInterval(() => {
+      setSpinningIndex((prev) => (prev + 1) % NAME_LIST.length)
+    }, 50)
+
     // Roll company slot
     setActiveSlot("company")
-    await animateSlot(3000)
+    await new Promise((resolve) => setTimeout(resolve, 3000))
     setRevealedSlots((prev) => ({ ...prev, company: true }))
     setActiveSlot(null)
     await new Promise((resolve) => setTimeout(resolve, 300))
 
     // Roll department slot
     setActiveSlot("department")
-    await animateSlot(3000)
+    await new Promise((resolve) => setTimeout(resolve, 3000))
     setRevealedSlots((prev) => ({ ...prev, department: true }))
     setActiveSlot(null)
     await new Promise((resolve) => setTimeout(resolve, 300))
 
     // Roll name slot
     setActiveSlot("name")
-    await animateSlot(4000)
+    await new Promise((resolve) => setTimeout(resolve, 4000))
     setRevealedSlots((prev) => ({ ...prev, name: true }))
     setActiveSlot(null)
 
+    clearInterval(spinningInterval)
     setIsSpinning(false)
-  }
-
-  const animateSlot = (duration: number) => {
-    return new Promise<void>((resolve) => {
-      let speed = 50
-      const slowDownStart = duration - 1000
-      let elapsed = 0
-
-      const interval = setInterval(() => {
-        elapsed += speed
-        if (elapsed > slowDownStart) {
-          speed = Math.min(speed + 20, 300)
-        }
-        setSpinningIndex((prev) => (prev + 1) % NAME_LIST.length)
-      }, speed)
-
-      setTimeout(() => {
-        clearInterval(interval)
-        resolve()
-      }, duration)
-    })
   }
 
   return (
@@ -92,6 +70,7 @@ function RouteComponent() {
           }
           isRevealed={revealedSlots.company}
           isActive={activeSlot === "company"}
+          isSpinning={isSpinning && !revealedSlots.company}
           allValues={NAME_LIST.map((item) => item.company)}
         />
         <SlotColumn
@@ -103,6 +82,7 @@ function RouteComponent() {
           }
           isRevealed={revealedSlots.department}
           isActive={activeSlot === "department"}
+          isSpinning={isSpinning && !revealedSlots.department}
           allValues={NAME_LIST.map((item) => item.department)}
         />
         <SlotColumn
@@ -114,6 +94,7 @@ function RouteComponent() {
           }
           isRevealed={revealedSlots.name}
           isActive={activeSlot === "name"}
+          isSpinning={isSpinning && !revealedSlots.name}
           allValues={NAME_LIST.map((item) => item.name)}
         />
       </div>

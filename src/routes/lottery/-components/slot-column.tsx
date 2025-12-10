@@ -6,12 +6,14 @@ export default function SlotColumn({
   value,
   isRevealed,
   isActive,
+  isSpinning,
   allValues,
 }: {
   label: string
   value: string
   isRevealed: boolean
   isActive: boolean
+  isSpinning: boolean
   allValues: Array<string>
 }) {
   return (
@@ -36,7 +38,7 @@ export default function SlotColumn({
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-black/90 to-transparent z-10 pointer-events-none" />
 
         <div className="relative h-full flex items-center justify-center overflow-hidden">
-          {isActive && !isRevealed ? (
+          {isSpinning && !isRevealed ? (
             <div className="absolute inset-0 flex flex-col items-center">
               {/* Create infinite scrolling effect with multiple sets */}
               {[...Array(4)].map((_, setIndex) => (
@@ -46,7 +48,7 @@ export default function SlotColumn({
                   initial={{ y: 0 }}
                   animate={{ y: "-100%" }}
                   transition={{
-                    duration: 0.3,
+                    duration: isActive ? 0.3 : 0.2,
                     repeat: Infinity,
                     ease: "linear",
                   }}
@@ -72,7 +74,7 @@ export default function SlotColumn({
               initial={
                 isRevealed
                   ? { scale: 0, rotate: -180, opacity: 0 }
-                  : { y: -60, opacity: 0 }
+                  : { y: 0, opacity: 1 }
               }
               animate={
                 isRevealed
@@ -88,9 +90,7 @@ export default function SlotColumn({
                     duration: 1,
                   }
                   : {
-                    type: "spring",
-                    stiffness: 500,
-                    damping: 30,
+                    duration: 0,
                   }
               }
               className="text-2xl font-black text-white px-6 text-center leading-tight"
