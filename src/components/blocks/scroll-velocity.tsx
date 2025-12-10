@@ -144,11 +144,11 @@ export function ScrollVelocity({
   velocityMapping = { input: [0, 1000], output: [0, 5] },
 }: ScrollVelocityProps) {
   return (
-    <section className="text-foreground overflow-hidden select-none">
+    <section className="text-foreground overflow-hidden select-none flex">
       {texts.map((text: string, index: number) => (
         <VelocityText
           key={index}
-          className={className}
+          className={`px-4 ` + className}
           baseVelocity={index % 2 !== 0 ? -velocity : velocity}
           scrollContainerRef={scrollContainerRef}
           damping={damping}

@@ -6,15 +6,15 @@ import IntroductionVideo from '/introduction.mp4'
 export default function LandingPage() {
   return (
     <>
-      <div className="absolute w-screen h-max opacity-10 -bottom-20">
-        <ScrollVelocity
-          texts={["TOGETHER INTO THE NEW YEAR - "]}
-          velocity={100}
-          className="text-6xl lg:text-9xl font-black font-serif pointer-events-none"
-          numCopies={10}
-        />
-      </div>
       <div className="relative flex lg:flex-row flex-col justify-center items-center gap-8 lg:gap-12 h-svh">
+        <div className="absolute w-screen h-max opacity-10 -bottom-1/6">
+          <ScrollVelocity
+            texts={["TOGETHER INTO THE NEW YEAR 2026 ✷"]}
+            velocity={100}
+            className="text-6xl lg:text-9xl font-black font-sans pointer-events-none"
+            numCopies={10}
+          />
+        </div>
         <div className="flex flex-col justify-center items-center gap-8">
           <Animated>
             <img className="w-xs lg:w-md pointer-events-none" src={HollywoodPNG} />
