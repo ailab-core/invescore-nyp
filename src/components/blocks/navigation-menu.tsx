@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router"
 import RedCurtainsPNG from "/red-curtains.png"
 
-export default function NavigationMenu() {
+export function NavigationMenu() {
   return (
     <div className="fixed w-screen top-0 bg-secondary/20 flex justify-center items-center gap-8 h-12 backdrop-blur-3xl z-50 border border-b-orange-300 uppercase text-xs lg:text-base">
       <Link to="/">{"Home"}</Link>

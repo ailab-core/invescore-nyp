@@ -1,6 +1,5 @@
 import { DotIcon } from "lucide-react"
-import AnimatedContent from "@/components/ui-patterns/animated-content"
-import ScrollVelocity from "@/components/ui-patterns/scroll-velocity"
+import { Animated, ScrollVelocity } from "@/components/blocks"
 import HollywoodPNG from '/hollywood.png'
 import IntroductionVideo from '/introduction.mp4'
 
@@ -17,48 +16,13 @@ export default function LandingPage() {
       </div>
       <div className="relative flex lg:flex-row flex-col justify-center items-center gap-8 lg:gap-12 h-svh">
         <div className="flex flex-col justify-center items-center gap-8">
-          <AnimatedContent
-            distance={150}
-            direction="vertical"
-            reverse={false}
-            duration={0.7}
-            ease="power3.out"
-            initialOpacity={0}
-            animateOpacity
-            scale={1.1}
-            threshold={0.1}
-            delay={0}
-          >
+          <Animated>
             <img className="w-xs lg:w-md pointer-events-none" src={HollywoodPNG} />
-          </AnimatedContent>
-          <AnimatedContent
-            className="lg:block hidden"
-            distance={150}
-            direction="vertical"
-            reverse={false}
-            duration={0.7}
-            ease="power3.out"
-            initialOpacity={0}
-            animateOpacity
-            scale={1.1}
-            threshold={0.1}
-            delay={0.2}
-          >
+          </Animated>
+          <Animated className="lg:block hidden" transition={{ delay: 0.2 }}>
             <h1 className="text-4xl font-black uppercase">{"You are invited!"}</h1>
-          </AnimatedContent>
-          <AnimatedContent
-            className="lg:block hidden"
-            distance={150}
-            direction="vertical"
-            reverse={false}
-            duration={0.7}
-            ease="power3.out"
-            initialOpacity={0}
-            animateOpacity
-            scale={1.1}
-            threshold={0.1}
-            delay={0.4}
-          >
+          </Animated>
+          <Animated className="lg:block hidden" transition={{ delay: 0.4 }}>
             <div className="flex lg:text-xl">
               December 26th 2025
               <DotIcon className="size-6" />
@@ -66,53 +30,18 @@ export default function LandingPage() {
               <DotIcon className="size-6" />
               UG Palace
             </div>
-          </AnimatedContent>
+          </Animated>
         </div>
-        <AnimatedContent
-          distance={150}
-          direction="vertical"
-          reverse={false}
-          duration={0.7}
-          ease="power3.out"
-          initialOpacity={0}
-          animateOpacity
-          scale={1.1}
-          threshold={0.1}
-          delay={0.2}
-        >
+        <Animated>
           <video controls className="aspect-video rounded-lg w-full lg:max-w-3xl" autoPlay>
             <source src={IntroductionVideo} type="video/mp4" />
           </video>
-        </AnimatedContent>
+        </Animated>
         <div className="flex flex-col justify-center items-center gap-2">
-          <AnimatedContent
-            className="lg:hidden block"
-            distance={150}
-            direction="vertical"
-            reverse={false}
-            duration={0.7}
-            ease="power3.out"
-            initialOpacity={0}
-            animateOpacity
-            scale={1.1}
-            threshold={0.1}
-            delay={0.4}
-          >
+          <Animated className="lg:hidden block" transition={{ delay: 0.4 }}>
             <h1 className="text-4xl font-black uppercase">{"You are invited!"}</h1>
-          </AnimatedContent>
-          <AnimatedContent
-            className="lg:hidden block"
-            distance={150}
-            direction="vertical"
-            reverse={false}
-            duration={0.7}
-            ease="power3.out"
-            initialOpacity={0}
-            animateOpacity
-            scale={1.1}
-            threshold={0.1}
-            delay={0.6}
-          >
+          </Animated>
+          <Animated className="lg:hidden block" transition={{ delay: 0.6 }}>
             <div className="flex lg:text-xl">
               December 26th 2025
               <DotIcon className="size-6" />
@@ -120,7 +49,7 @@ export default function LandingPage() {
               <DotIcon className="size-6" />
               UG Palace
             </div>
-          </AnimatedContent>
+          </Animated>
         </div>
       </div>
     </>

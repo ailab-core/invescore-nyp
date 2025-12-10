@@ -3,6 +3,7 @@ import Agenda from "./-components/agenda"
 import Landing from "./-components/landing"
 import Menu from "./-components/menu"
 import Seat from "./-components/seat"
+import { NavigationMenu } from "@/components/blocks"
 
 export const Route = createFileRoute("/")({
   component: App,
@@ -10,11 +11,17 @@ export const Route = createFileRoute("/")({
 
 function App() {
   return (
-    <div className="space-y-32">
-      <Landing />
-      <Agenda />
-      <Menu />
-      <Seat />
-    </div>
+    <>
+      <NavigationMenu />
+      <div className="space-y-32 relative overflow-hidden">
+        <div className="absolute h-full top-0 left-1/2 -translate-x-1/2 bg-red-900 w-xs -z-10 opacity-10">
+          <div className="relative w-[calc(100%-32px)] h-[calc(100%-32px)] left-4 top-4 border-4 border-foreground" />
+        </div>
+        <Landing />
+        <Agenda />
+        <Menu />
+        <Seat />
+      </div>
+    </>
   )
 }
