@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router"
 import { useState } from "react"
+import InvescoreLogo from "/invescore-logo.png"
 import SlotColumn from "./-components/slot-column"
 import { NAME_LIST } from "./-data"
 
@@ -49,8 +50,9 @@ function RouteComponent() {
 
   return (
     <div className="mt-48 flex flex-col justify-center items-center gap-16">
-      <h1 className="text-4xl lg:text-6xl mb-4 bg-clip-text text-orange-300">
-        Lottery
+      <h1 className="flex items-center gap-4 text-4xl lg:text-6xl mb-4 bg-clip-text text-orange-300">
+        <img src={InvescoreLogo} alt="Invescore Logo" className="w-64 pb-8" />
+        <span className="bg-orange-300 text-black rounded-md p-4">LOTTERY</span>
       </h1>
       <div className="flex gap-8 mb-8">
         <SlotColumn
