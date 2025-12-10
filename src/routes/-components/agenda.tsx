@@ -1,8 +1,8 @@
 import { useState } from "react"
 import ReactMarkdown from "react-markdown"
-import { cn } from "uilab-core"
 import { Calendar, Clock } from "lucide-react"
-import AnimatedContent from "@/components/ui-patterns/animated-content"
+import { Animated } from "@/components/blocks"
+import { cn } from "@/lib/utils"
 
 const agenda = import("../../data/agenda.md")
   .then(async (res: any) => await fetch(res.default).then((response) => response.text()))
@@ -13,19 +13,8 @@ export default function Agenda() {
   agenda.then((txt: any) => setContent(txt))
 
   return (
-    <div className="max-w-fit mx-auto my-24" id="agenda">
-      <AnimatedContent
-        distance={100}
-        direction="vertical"
-        reverse={false}
-        duration={0.7}
-        ease="power3.out"
-        initialOpacity={0}
-        animateOpacity
-        scale={1}
-        threshold={0.1}
-        delay={0.4}
-      >
+    <div className="max-w-fit mx-auto py-24" id="agenda">
+      <Animated>
         <div className="mb-12 text-center">
           <h1 className="text-4xl lg:text-6xl mb-4 bg-clip-text text-orange-300">
             AGENDA
@@ -34,19 +23,8 @@ export default function Agenda() {
             Schedule and important dates
           </p>
         </div>
-      </AnimatedContent>
-      <AnimatedContent
-        distance={100}
-        direction="vertical"
-        reverse={false}
-        duration={0.7}
-        ease="power3.out"
-        initialOpacity={0}
-        animateOpacity
-        scale={1}
-        threshold={0.1}
-        delay={0.6}
-      >
+      </Animated>
+      <Animated transition={{ delay: 0.2 }}>
         <div
           className={cn(
             "prose prose-slate dark:prose-invert max-w-none space-y-8",
@@ -84,7 +62,7 @@ export default function Agenda() {
             {content}
           </ReactMarkdown>
         </div>
-      </AnimatedContent>
+      </Animated>
     </div>
   )
 }

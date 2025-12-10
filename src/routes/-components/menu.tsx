@@ -1,6 +1,6 @@
 import { Fragment } from "react"
-import { cn } from "uilab-core"
-import AnimatedContent from "@/components/ui-patterns/animated-content"
+import { Animated } from "@/components/blocks"
+import { cn } from "@/lib/utils"
 import ProscuittoPNG from '/proscuitto.png'
 import BeefThermidorPNG from '/beef-thermidor.png'
 import SearedDuckBreastPNG from '/seared-duck-breast.png'
@@ -55,89 +55,42 @@ const MenuItems: Array<Food> = [
 export default function Menu() {
   return (
     <div className="container mx-auto flex flex-col justify-center items-center gap-12 py-24" id="menu">
-      <AnimatedContent
-        direction="vertical"
-        reverse={false}
-        ease="power3.out"
-        initialOpacity={0}
-        animateOpacity
-        scale={1}
-        threshold={0.7}
-        duration={0.7}
-        delay={0.4}
-      >
+      <Animated>
         <h1 className="text-4xl lg:text-6xl mb-4 bg-clip-text text-orange-300">
           MENU
         </h1>
-      </AnimatedContent>
+      </Animated>
       <div className="flex flex-col items-center space-y-24">
         {MenuItems.map((food, index) => (
           <Fragment key={food.title}>
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-12" key={food.title}>
-              <AnimatedContent
-                distance={100}
-                direction="vertical"
-                reverse={false}
-                duration={0.7}
-                ease="power3.out"
-                initialOpacity={0}
-                animateOpacity
-                threshold={0.7}
-                scale={1}
-                delay={0.4}
-                className={cn("w-fit", index % 2 === 0 ? "order-first lg:order-last" : "order-first")}
-              >
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
+              <Animated className={cn("w-fit", index % 2 === 0 ? "order-first lg:order-last" : "order-first")}>
                 <img
                   src={food.image.src}
                   alt={food.image.alt}
                   className="w-3xs rounded-3xl object-cover"
                 />
-              </AnimatedContent>
-              <AnimatedContent
-                distance={100}
-                direction="vertical"
-                reverse={false}
-                duration={0.7}
-                ease="power3.out"
-                initialOpacity={0}
-                animateOpacity
-                threshold={0.7}
-                scale={1}
-                delay={0.4}
-                className={"lg:w-lg space-y-4 text-lg px-12"}
-              >
+              </Animated>
+              <Animated className="lg:w-lg space-y-4 text-lg px-12">
                 <p className="text-3xl font-bold text-center lg:text-left">
                   {food.title}
                   {food.subtitle && <span className="text-lg ml-2">({food.subtitle})</span>}
                 </p>
                 <p className="text-justify lg:text-left">{food.description}</p>
-              </AnimatedContent>
+              </Animated>
             </div>
             <hr className="bg-orange-300 w-[100px]" />
           </Fragment>
         ))}
+        <Animated className="space-y-4 text-center px-12">
+          <p className="text-2xl font-bold">
+            Drinks
+          </p>
+          <p className="text-lg">
+            {"Welcoming Wine • Heineken • Millenia • Soft drinks"}
+          </p>
+        </Animated>
       </div>
-
-      <AnimatedContent
-        distance={100}
-        direction="vertical"
-        reverse={false}
-        duration={0.7}
-        ease="power3.out"
-        initialOpacity={0}
-        animateOpacity
-        threshold={0.7}
-        scale={1}
-        delay={0.4}
-        className="space-y-4 text-lg"
-      >
-        <p className="text-2xl font-bold text-center">
-          Drinks
-        </p>
-        <p className="text-lg text-center">
-          Welcoming Wine • Millenia • Heineken • Soft drinks
-        </p>
-      </AnimatedContent>
     </div>
   )
 }
