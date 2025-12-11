@@ -8,6 +8,9 @@ export const Route = createFileRoute("/lottery/")({
   component: RouteComponent,
 })
 
+// TODO:
+// - Exclude a winner on second spin
+
 function RouteComponent() {
   const [isSpinning, setIsSpinning] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)

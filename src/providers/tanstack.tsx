@@ -1,4 +1,4 @@
-import { RouterProvider, createRouter } from "@tanstack/react-router"
+import { RouterProvider, createHashHistory, createRouter } from "@tanstack/react-router"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { routeTree } from "@/routeTree.gen";
 
@@ -8,12 +8,16 @@ declare module "@tanstack/react-router" {
   }
 }
 
+const hashHistory = createHashHistory()
+
 const router = createRouter({
   routeTree,
   defaultPreload: "intent",
   scrollRestoration: true,
+  scrollRestorationBehavior: "smooth",
   defaultStructuralSharing: true,
   defaultPreloadStaleTime: 0,
+  history: hashHistory,
 })
 
 export const queryClient = new QueryClient({
