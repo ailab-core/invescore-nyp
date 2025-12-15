@@ -16,7 +16,7 @@ function RouteComponent() {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [revealedSlots, setRevealedSlots] = useState({
     company: false,
-    department: false,
+    position: false,
     name: false,
   })
   const [spinningIndex, setSpinningIndex] = useState(0)
@@ -34,7 +34,7 @@ function RouteComponent() {
   const startSpin = async () => {
     if (isSpinning) return
     setIsSpinning(true)
-    setRevealedSlots({ company: false, department: false, name: false })
+    setRevealedSlots({ company: false, position: false, name: false })
 
     const finalIndex = Math.floor(Math.random() * NAME_LIST.length)
     setSelectedIndex(finalIndex)
@@ -44,7 +44,7 @@ function RouteComponent() {
     }, 50)
 
     await rollSlot("company", 3000)
-    await rollSlot("department", 3000)
+    await rollSlot("position", 3000)
     await rollSlot("name", 4000, true)
 
     clearInterval(spinningInterval)
@@ -71,16 +71,16 @@ function RouteComponent() {
           allValues={NAME_LIST.map((item) => item.company)}
         />
         <SlotColumn
-          label="Department"
+          label="Position"
           value={
-            revealedSlots.department
-              ? NAME_LIST[selectedIndex].department
-              : NAME_LIST[spinningIndex].department
+            revealedSlots.position
+              ? NAME_LIST[selectedIndex].position
+              : NAME_LIST[spinningIndex].position
           }
-          isRevealed={revealedSlots.department}
-          isActive={activeSlot === "department"}
-          isSpinning={isSpinning && !revealedSlots.department}
-          allValues={NAME_LIST.map((item) => item.department)}
+          isRevealed={revealedSlots.position}
+          isActive={activeSlot === "position"}
+          isSpinning={isSpinning && !revealedSlots.position}
+          allValues={NAME_LIST.map((item) => item.position)}
         />
         <SlotColumn
           label="Name"
