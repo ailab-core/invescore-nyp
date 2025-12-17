@@ -1,4 +1,5 @@
 import { Animated } from "@/components/blocks"
+import SeatPNG from "/seat.png"
 
 export default function Seat() {
   return (
@@ -7,9 +8,7 @@ export default function Seat() {
         <h1 className="text-4xl lg:text-6xl mb-4 bg-clip-text text-orange-300 text-center">
           {"SEAT"}
         </h1>
-        <p className="text-center text-3xl mt-32">
-          {"Coming soon..."}
-        </p>
+        <img className="rounded-4xl w-[700px] max-w-full px-8" src={SeatPNG} alt="Seat" />
       </Animated>
     </div>
   )
