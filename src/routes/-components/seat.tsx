@@ -1,5 +1,5 @@
 import { Animated } from "@/components/blocks"
-import SeatPNG from "/seat.png"
+import SeatWEBP from "/seat.webp"
 
 export default function Seat() {
   return (
@@ -8,7 +8,7 @@ export default function Seat() {
         <h1 className="text-4xl lg:text-6xl mb-4 bg-clip-text text-orange-300 text-center">
           {"SEAT"}
         </h1>
-        <img className="rounded-4xl w-[700px] max-w-full px-8" src={SeatPNG} alt="Seat" />
+        <img className="rounded-4xl w-[700px] max-w-full px-8" src={SeatWEBP} alt="Seat" />
       </Animated>
     </div>
   )
