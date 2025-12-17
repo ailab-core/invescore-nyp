@@ -8,7 +8,9 @@ export default function Seat() {
         <h1 className="text-4xl lg:text-6xl mb-4 bg-clip-text text-orange-300 text-center">
           {"SEAT"}
         </h1>
-        <img className="rounded-4xl w-[700px] max-w-full px-8" src={SeatWEBP} alt="Seat" />
+        <div className="p-8">
+          <img className="rounded-4xl w-[700px] max-w-full" src={SeatWEBP} alt="Seat" />
+        </div>
       </Animated>
     </div>
   )
