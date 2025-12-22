@@ -911,11 +911,6 @@ export const NAME_LIST = [
   },
   {
     "company": "Property",
-    "position": "Харилцагчийн үйлчилгээний ажилтан ",
-    "name": "Төмөрбаатар Сарантуяа "
-  },
-  {
-    "company": "Property",
     "position": "Харуул хамгаалалтын ажилтан",
     "name": "Дугаа Батхуяг"
   },
@@ -931,18 +926,8 @@ export const NAME_LIST = [
   },
   {
     "company": "Property",
-    "position": "Гадна талбайн ажилтан",
-    "name": "Батсуурь  Эрдэнэчулуун"
-  },
-  {
-    "company": "Property",
     "position": "Үйлчилгээний ажилтан",
     "name": "Цэдлээ Нямаахүү"
-  },
-  {
-    "company": "Property",
-    "position": "Үйлчилгээний ажилтан",
-    "name": "Гомбо  Тунгалагтамир "
   },
   {
     "company": "Property",

@@ -26,10 +26,10 @@ export default function CarouselSize() {
   )
 
   return (
-    <div className="container mx-auto flex flex-col justify-center items-center gap-12 py-24 px-16" id="menu">
+    <div className="container mx-auto flex flex-col justify-center items-center gap-12 py-24 px-16" id="movies">
       <Animated>
         <h1 className="text-4xl lg:text-6xl mb-4 bg-clip-text text-orange-300">
-          MOVIE POSTERS
+          MOVIES
         </h1>
       </Animated>
       <Carousel
