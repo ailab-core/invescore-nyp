@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Animated } from "@/components/blocks"
 import AilabPoster from "/posters/ailab.webp"
 import InvescoreFIPoster from "/posters/invescore-fi.webp"
 import ICapitalPoster from "/posters/icapital.webp"
@@ -15,14 +16,10 @@ import MTNPoster from "/posters/mtn.webp"
 import PropertyPoster from "/posters/property.webp"
 import SIBJPoster from "/posters/sibj.webp"
 import PocketPoster from "/posters/pocket.webp"
-import { Animated } from "@/components/blocks"
 
 export default function CarouselSize() {
   const plugin = React.useRef(
-    Autoplay({
-      delay: 2000,
-      stopOnInteraction: true,
-    })
+    Autoplay({ delay: 5000, stopOnInteraction: true })
   )
 
   return (
@@ -35,36 +32,41 @@ export default function CarouselSize() {
       <Carousel
         plugins={[plugin.current]}
         className="w-full lg:max-w-6xl"
-        opts={{
-          align: "start",
-          loop: true,
-        }}
+        opts={{ align: "start", loop: true }}
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
         <CarouselContent>
-          <CarouselItem className="basis-1/1 lg:basis-1/3">
+          <CarouselItem className="relative basis-1/1 lg:basis-1/3">
+            <p className="text-center text-lg font-bold pb-4">AILAB</p>
             <img className="w-full" src={AilabPoster} alt="AilabPoster" />
           </CarouselItem>
-          <CarouselItem className="basis-1/1 lg:basis-1/3">
+          <CarouselItem className="relative basis-1/1 lg:basis-1/3">
+            <p className="text-center text-lg font-bold pb-4">INVESCORE FI</p>
             <img className="w-full" src={InvescoreFIPoster} alt="InvescoreFIPoster" />
           </CarouselItem>
-          <CarouselItem className="basis-1/1 lg:basis-1/3">
+          <CarouselItem className="relative basis-1/1 lg:basis-1/3">
+            <p className="text-center text-lg font-bold pb-4">ICAPITAL</p>
             <img className="w-full" src={ICapitalPoster} alt="ICapitalPoster" />
           </CarouselItem>
-          <CarouselItem className="basis-1/1 lg:basis-1/3">
+          <CarouselItem className="relative basis-1/1 lg:basis-1/3">
+            <p className="text-center text-lg font-bold pb-4">ILEASE</p>
             <img className="w-full" src={ILeasePoster} alt="ILeasePoster" />
           </CarouselItem>
-          <CarouselItem className="basis-1/1 lg:basis-1/3">
+          <CarouselItem className="relative basis-1/1 lg:basis-1/3">
+            <p className="text-center text-lg font-bold pb-4">MTN</p>
             <img className="w-full" src={MTNPoster} alt="MTNPoster" />
           </CarouselItem>
-          <CarouselItem className="basis-1/1 lg:basis-1/3">
+          <CarouselItem className="relative basis-1/1 lg:basis-1/3">
+            <p className="text-center text-lg font-bold pb-4">INVESCORE PROPERTY</p>
             <img className="w-full" src={PropertyPoster} alt="PropertyPoster" />
           </CarouselItem>
-          <CarouselItem className="basis-1/1 lg:basis-1/3">
+          <CarouselItem className="relative basis-1/1 lg:basis-1/3">
+            <p className="text-center text-lg font-bold pb-4">SIBJ</p>
             <img className="w-full" src={SIBJPoster} alt="SIBJPoster" />
           </CarouselItem>
-          <CarouselItem className="basis-1/1 lg:basis-1/3">
+          <CarouselItem className="relative basis-1/1 lg:basis-1/3">
+            <p className="text-center text-lg font-bold pb-4">POCKET</p>
             <img className="w-full" src={PocketPoster} alt="PocketPoster" />
           </CarouselItem>
         </CarouselContent>
