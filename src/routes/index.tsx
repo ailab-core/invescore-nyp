@@ -3,6 +3,7 @@ import Agenda from "./-components/agenda"
 import Landing from "./-components/landing"
 import Menu from "./-components/menu"
 import Seat from "./-components/seat"
+import Posters from "./-components/posters"
 import { NavigationMenu } from "@/components/blocks"
 
 export const Route = createFileRoute("/")({
@@ -21,6 +22,7 @@ function App() {
         <Agenda />
         <Menu />
         <Seat />
+        <Posters />
       </div>
     </>
   )
