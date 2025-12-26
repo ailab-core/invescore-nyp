@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router"
 import { useState } from "react"
-import InvescoreLogo from "/invescore-logo.png"
+import LotteryLogo from "/lottery.png"
 import SlotColumn from "./-components/slot-column"
 import { NAME_LIST } from "./-data"
 
@@ -8,8 +8,16 @@ export const Route = createFileRoute("/lottery/")({
   component: RouteComponent,
 })
 
-// TODO:
-// - Exclude a winner on second spin
+const numbers = Array.from(
+  { length: NAME_LIST.length - 1 },
+  (_, i) => i + 1
+);
+
+// Fisher–Yates shuffle
+for (let i = numbers.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
+}
 
 function RouteComponent() {
   const [isSpinning, setIsSpinning] = useState(false)
@@ -35,9 +43,7 @@ function RouteComponent() {
     if (isSpinning) return
     setIsSpinning(true)
     setRevealedSlots({ company: false, position: false, name: false })
-
-    const finalIndex = Math.floor(Math.random() * NAME_LIST.length)
-    setSelectedIndex(finalIndex)
+    setSelectedIndex(numbers.pop() as number)
 
     const spinningInterval = setInterval(() => {
       setSpinningIndex((prev) => (prev + 1) % NAME_LIST.length)
@@ -53,9 +59,8 @@ function RouteComponent() {
 
   return (
     <div className="mt-48 flex flex-col justify-center items-center gap-16">
-      <h1 className="flex items-center gap-4 text-4xl lg:text-6xl mb-4 bg-clip-text text-orange-300">
-        <img src={InvescoreLogo} alt="Invescore Logo" className="w-64 pb-8" />
-        <span className="bg-orange-300 text-black rounded-md p-4">LOTTERY</span>
+      <h1 className="flex items-center gap-4 text-4xl lg:text-6xl bg-clip-text text-orange-300">
+        <img src={LotteryLogo} alt="Invescore Logo" className="w-[700px]" />
       </h1>
       <div className="flex gap-8 mb-8">
         <SlotColumn
